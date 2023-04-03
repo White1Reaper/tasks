@@ -1,0 +1,62 @@
+body{
+    background: radial-gradient(magenta, 
+                                lightseagreen);
+   }
+   .con{
+    transition:0.3s;
+      max-width:600px;
+   opacity:0.2;
+  background: cyan;
+   border: 2px inset red;
+  border-radius:5%;
+  margin:auto;
+  }
+  form{
+  display:flex;
+  flex-direction:column;
+  }
+form > div{
+  margin-top: 30px;
+  margin-left:20%;
+  
+}
+.gen, .limb{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  width:60%;
+}
+.limb div{
+  margin:8px;
+}
+  button {
+   margin-left:10%;
+   border:3px inset violet;
+      border-radius:44px; 
+   background: yellow;	 
+   width:300px;
+    margin:auto;
+   height:50px;
+   margin-top:30px;
+   color: #3474ff;
+  font-weight:1000;
+  }
+  button:hover {
+  transition: .2s;
+   background: none;
+  }
+  .con:hover{
+   opacity:1;
+   transition:0.3s;
+  }
+  #fio1, #date1, #email1, #biography2 {
+    background:#00adff;
+    width:70%;
+    border:1px solid #003cff;
+          border-radius:20px; 
+  }
+#biography2{
+          border-radius:10px; 
+  
+  height:100px;
+}
