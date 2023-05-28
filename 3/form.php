@@ -60,7 +60,7 @@
 					           </div>
 							   </div> 
 							   <div> <select name ="Abilities[]"  multiple>
-				<option value="1" selected="selected">левитация</option>
+				<option value="1">левитация</option>
 				<option value="2">бессмертие</option>
 				<option value="3">невидимость</option>
 		</select>
