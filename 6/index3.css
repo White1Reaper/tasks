@@ -1,0 +1,12 @@
+form{
+    margin-top: 20px;
+}
+table{
+    border: 3px solid black;
+}
+td, th{
+    border: 1px solid black;   
+}
+th{
+    background: cyan;
+}
