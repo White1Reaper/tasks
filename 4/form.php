@@ -16,27 +16,27 @@
 		       <label >
 			   <div> имя</div>       <input name ="fio"<?php  if(!empty($_COOKIE['err_fio'])||!empty($_COOKIE['err_fio2'])) {print 'class="err"';} ?> value="<?php echo $values['fio'];?>" id="fio1"
 					   placeholder="ваше имя" />
-							 </label><div >	<?php if(!empty($_COOKIE['err_fio'])) {echo "Заполните имя."; } else{echo '';}?></div><div >	<?php if(!empty($_COOKIE['err_fio2'])) {echo "имя пишите только латинскими буквами или только на кириллице"; } else{echo '';}?></div>
+							 </label><div >	<?php if(!empty($_COOKIE['err_fio'])) {echo "Заполните имя."; setcookie("err_fio",'');} else{echo '';}?></div><div >	<?php if(!empty($_COOKIE['err_fio2'])) {echo "имя пишите только латинскими буквами или только на кириллице"; setcookie("err_fio2",'');} else{echo '';}?></div>
 		       <label>
 </div>
 <div>		       
 <div>год</div> 
 		       <input name ="year" <?php  if(!empty($_COOKIE['err_date'])) {print 'class="err"';} ?>  value="<?php if(isset($_COOKIE['year'])) {echo $_COOKIE['year']; }else {echo NULL;}?>" type="date" id="date1"
 					   placeholder="год вашего рождения" />
-							 </label><div >	<?php if(!empty($_COOKIE['err_date'])) {echo "Заполните год."; } else{echo '';}?></div>
+							 </label><div >	<?php if(!empty($_COOKIE['err_date'])) {echo "Заполните год."; setcookie("err_date",'');} else{echo '';}?></div>
 </div>	       
 <div>
 			   <label>
 			   <div>  email</div>
 		       <input name ="email" <?php  if(!empty($_COOKIE['err_email'])||!empty($_COOKIE['err_email2'])) {print 'class="err"';} ?> 
 					   placeholder="ваша почта"value="<?php if(isset($_COOKIE['email'])) {echo $_COOKIE['email']; }else {echo'';}?>" id="email1"/>
-							 </label><div >	<?php if(!empty($_COOKIE['err_email'])) {echo "Заполните почту."; } else{echo '';}?></div><div >	<?php if(!empty($_COOKIE['err_email2'])) {echo "отсутствует символ '@'"; } else{echo '';}?></div>
+							 </label><div >	<?php if(!empty($_COOKIE['err_email'])) {echo "Заполните почту."; setcookie("err_email",'');} else{echo '';}?></div><div >	<?php if(!empty($_COOKIE['err_email2'])) {echo "отсутствует символ '@'"; setcookie("err_email2",'');} else{echo '';}?></div>
 							</div>
 							 <div>
 			   <label> <div>биография</div>
 			
 			<textarea name="biography" <?php  if(!empty($_COOKIE['err_biography'])) {print 'class="err"';} ?>  id="biography2"><?php if(isset($_COOKIE['biography'])) {echo $_COOKIE['biography']; }else {echo'';}?></textarea>
-			</label><div >	<?php if(!empty($_COOKIE['err_fio'])) {echo "Заполните биографию."; } else{echo '';}?></div>
+			</label><div >	<?php if(!empty($_COOKIE['err_fio'])) {echo "Заполните биографию."; setcookie("err_biography",'');} else{echo '';}?></div>
 		</div>
 		<div>
 		<div>кол-во конечностей</div>       
@@ -66,11 +66,11 @@
 					   value="woman" /><div> женский </div></label>
 					           </div>
 							   </div> 
-							   <div> <select name ="Abilities[]"  multiple>
+							   <div> <select name ="Abilities[]"  <?php  if(!empty($_COOKIE['err_abil'])) {print 'class="err"'; } ?> multiple>
 				<option value="1"  <?php if (isset($_COOKIE['abil1'])&&in_array(1,unserialize($_COOKIE['abil1']))) {echo  ' selected="selected"';}?>>левитация</option>
 				<option value="2"  <?php if (isset($_COOKIE['abil1'])&&in_array(2,unserialize($_COOKIE['abil1']))) {echo  ' selected="selected"';}?>>бессмертие</option>
 				<option value="3"  <?php if (isset($_COOKIE['abil1'])&&in_array(3,unserialize($_COOKIE['abil1']))) {echo  ' selected="selected"';}?>>невидимость</option>
-		</select>
+		</select><?php setcookie("err_abil","");?>
 </div>
 <div><input name ="box" type="checkbox" id="box" checked="checked"/> с контрактом ознакомлен(а)
 					        </label> </div>
